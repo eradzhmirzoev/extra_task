@@ -1,0 +1,586 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-family: 'PT Serif', serif; */
+}
+
+header {
+    height: 691px;
+    width: 1200px;
+    margin: 0 auto;
+    background:url('../img/bg.jpg') no-repeat;
+    position: relative;
+    z-index: 0;
+}
+
+header:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    width: 1011px;
+    margin: 0px auto;
+}
+
+header .container {
+    padding-left: 20px;
+}
+
+.menu {
+    padding-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu-link {
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    color: #1b1b1b;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color .2s, color .2s;
+    
+}
+
+.menu-link:hover {
+    background: #d03958;
+    color: #fff;
+}
+
+.sub-header {
+    font-family: 'PT Serif', serif;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    position: relative;
+}
+
+.title {
+    width: 520px;
+}
+
+.offer {
+    color: #d03958;
+    font-size: 90px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: -2px;
+}
+
+.offer span {
+    color: #161616;
+}
+
+.block-paragraph {
+    margin-top: 45px;
+    width: 465px;
+}
+
+.paragraph {
+    font-size: 20px;
+    line-height: 28px;
+    color: #161616;
+}
+
+
+/*form*/
+
+.wrap-form {
+    width: 400px;
+}
+
+.header-form {
+    display: block;
+    background-color: #d03958;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 22px 28px 22px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 2;
+}
+
+.header-form h2 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 30px 0 30px 0;
+}
+
+.input-style {
+    padding: 20px 0 20px 20px;
+    width: 355px;
+    border-radius: 5px;
+    background: #fff;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 25px;
+    margin-bottom: 18px;
+    font-family: 'PT Serif', serif;
+}
+
+.input-country {
+    margin-bottom: 0px;
+}
+
+.block-checkbox {
+    align-self: flex-start;
+    position: relative;
+    margin: 20px 0 0 2px;
+}
+
+/*Меняю поведение стандартного чекбокса, т.к на картинке у нашего чекбокса скругленные границы. Нашел только такой вариант, изменения радиуса. Есть ли другой?*/
+.input-checkbox {
+    appearance: none;
+    position: absolute;
+}
+
+.label-checkbox {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'PT Serif', serif;
+    padding-left: 45px;
+    position: relative;
+    cursor: pointer;
+}
+
+.label-checkbox:before {
+    content: "";
+    display: block;
+    width: 21px;
+    height: 21px;
+    background: #fff;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.label-checkbox:after {
+    content: "";
+    display: block;
+    background: url('../img/ok.png') no-repeat;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: -2px;
+    top: 2px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity .1s;
+}
+
+.input-checkbox:checked + .label-checkbox:after {
+    opacity: 1;
+}
+
+/*button*/
+.btn {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: serif;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    width: 353px;
+    height: 57px;
+    border-radius: 5px;
+    background: #161616;
+    border: none;
+    outline: none;
+    border: 3px solid transparent;
+    transition: border .2s, background-color .2s, color .2s;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    border: 3px solid #fff;
+    background: #d03958;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:active {
+    border-color: #161616;
+    color: #161616;
+    font-weight: 700;
+}
+
+/*section-services*/
+
+.section-services {
+    padding-bottom: 65px;
+}
+.services-list {
+    padding-top: 10px;
+}
+
+.sub-title {
+    color: #d03958;
+    font-family: 'COUTURE';
+    font-size: 50px;
+    letter-spacing: -1;
+    line-height: 80px;
+}
+
+.sub-title span {
+    color: #161616;
+}
+
+.box-list {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-item {
+    width: 178px;
+    text-align: center;
+}
+
+.img-item {
+    height: 140px;
+}
+
+.box-item p {
+    font-family: 'PT Serif', serif;
+    font-size: 20px;
+    margin-top: 45px;
+}
+
+
+/*section short-describe*/
+
+.short-describe {
+    background: #cf3957;
+    padding: 25px 0 25px 0;
+}
+
+.block-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.block-text {
+    width: 640px;
+}
+
+.paragraph-describe{
+    color: #fff;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: 'PT Serif', serif;
+}
+
+
+.btn-story {
+    width: 270px;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 25px 0;
+    border-radius: 5px;
+    border: none;
+    color: #161616;
+    background: #e3d5b8;
+    border: 3px solid transparent;
+    transition: background-color .2s, border .2s, color .2s;
+}
+
+.btn-story:hover {
+    cursor: pointer;
+    background: #cf3957;
+    border: 3px solid #e3d5b8;
+    color: #e3d5b8;
+}
+
+/*section price*/
+.price {
+    padding-top: 60px;
+    background: #e3d5b7;
+    padding-left: 10px;
+}
+
+.box-item-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-price {
+    font-size: 50px;
+    letter-spacing: -1px;
+    color: #1f1f1f;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 80px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.price-item {
+    width: 318px;
+    background: #fff;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.price-level {
+    font-size: 22px;
+    line-height: 28px;
+    color: #161616;
+    font-family: 'PT Serif', serif;
+}
+
+.item-title {
+    color: #d03958;
+    font-size: 60px;
+    line-height: 80px;
+    letter-spacing: -1;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.describe-price {
+    padding-top: 10px;
+    width: 180px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.list-offer {
+    display: block;
+    font-size: 20px;
+    line-height: 28px;
+    color: #161616;
+    font-family: 'PT Serif', serif;
+}
+
+.link-btn {
+    margin-top: 20px;
+    display: inline-block;
+    width: 205px;
+    height: 49px;
+    background: #e3d5b8;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 49px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #161616;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color .2s, color .2s;
+}
+
+.link-btn:hover {
+    background: #cf3957;
+    color: #fff;
+    
+}
+
+/*Этикетка Populat*/
+/*Правильно ли спозиционированы элементы*/
+.triangle {
+    width: 95px;
+    height: 95px;
+    background: #b4a993;
+    border-top-left-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.triangle:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: skew(-45deg);
+}
+
+.triangle span {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    color: #1f1f1f;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: 'PT Serif', serif;
+    transform: rotate(-47deg);
+}
+
+/*section about-us*/
+.about-us {
+    background: #fff;
+    padding: 100px 0 120px 0;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 120px;
+    
+}
+
+.section-left {
+    width: 490px;
+}
+
+.describe-one,
+.right-img{
+    margin-top: 35px;
+}
+
+.describe-wrap {
+    width: 440px;
+    padding: 20px 0 30px 30px;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color .2s;
+}
+
+.describe-wrap:hover {
+    background-color: #e3d5b8;
+    cursor: pointer;
+}
+
+.img-describe {
+    position: absolute;
+    top: 15px;
+    left: 87%;
+}
+
+.section-left h2,
+.section-right h2{
+    font-size: 50px;
+    line-height: 80px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #1f1f1f;
+    letter-spacing: -1px;
+}
+
+.section-left h2 {
+    text-align: right;
+}
+
+.describe-box {
+    width: 360px;
+}
+
+.describe-box p {
+    font-size: 20px;
+    line-height: 28px;
+    color: #161616;
+    font-family: 'PT Serif', serif;
+}
+
+.name-link {
+    font-size: 20px;
+    line-height: 28px;
+    color: #d03958;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.name-link:hover {
+    color: #161616;
+}
+
+
+/*right section*/
+
+.section-right {
+    width: 385px;
+}
+
+.section-right h2 {
+    color: #d03958;
+    margin-left: 50px;
+}
+.right-img {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link-view {
+    display: inline-block;
+    margin-top: 35px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #d03958;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 60px;
+    transition: color .2s;
+}
+
+.link-view:hover {
+    color: #161616;
+}
+
+/*footer*/
+
+.footer {
+    padding: 80px 0;
+    background: #151515;
+    
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    color: #fff;
+    font-size: 20px;
+    line-height: 22px;
+    font-family: 'PT Serif', serif;
+}
+
+.footer span {
+    color: #d03958;
+}
